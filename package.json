@@ -1,0 +1,40 @@
+{
+  "name": "lowcode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "ts-check": "tsc --noEmit",
+    "start": "ihouqi-cli-service start",
+    "build": "run-s build:font build:vite",
+    "build:vite": "ihouqi-cli-service build",
+    "build:font": "node ./deploy/generateFont.js",
+    "preview": "cross-env VITE_PREVIEW=1 IS_PREVIEW=1 ihouqi-cli-service build && ihouqi-cli-service preview",
+    "prettier": "prettier --config .prettierrc.js  --write './src/**/*.{js,jsx,tsx,ts,sass,md,json}'  --plugin-search-dir=./  --plugin-search-dir=./node_modules/@ihouqi/cli-misc/ ",
+    "deploy": "node ./deploy/updataHelm.js"
+  },
+  "dependencies": {
+    "@arco-design/web-react": "^2.40.2",
+    "@scena/react-guides": "^0.18.0",
+    "ahooks": "^3.7.2",
+    "alloyfinger": "^0.1.16",
+    "classnames": "^2.3.2",
+    "hox": "^2.1.0",
+    "immer": "^9.0.15",
+    "nanoid": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-moveable": "^0.39.6",
+    "react-router-dom": "^6.4.2",
+    "react-selecto": "^1.20.2",
+    "use-immer": "^0.7.0"
+  },
+  "devDependencies": {
+    "@ihouqi/cli-misc": "^1.0.4",
+    "@ihouqi/cli-service-vite": "^1.0.3",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
+  }
+}

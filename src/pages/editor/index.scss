@@ -1,0 +1,126 @@
+.editor {
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  background-color: #18181c;
+
+  &-toolbar {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100% - 40px);
+  }
+
+  &-view {
+    flex: 1;
+    width: 100%;
+  }
+  &-left,
+  &-right {
+    flex: none;
+    // overflow: hidden;
+  }
+}
+
+.materia-side {
+  width: 200px;
+  height: 100%;
+  overflow: scroll;
+  &-item {
+    width: 86%;
+    height: 138px;
+    margin: 0 7% 15px;
+    overflow: hidden;
+    background-color: #232324;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
+
+.layer-side {
+}
+
+.playground {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &-rule {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // z-index: 1;
+    width: 100%;
+    height: 100%;
+    &-eye {
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      color: white;
+      cursor: pointer;
+    }
+    &-w {
+      position: absolute;
+      z-index: 1;
+      width: calc(100% - 28px);
+      margin-left: 28px;
+      // height: 28px;
+    }
+    &-h {
+      position: absolute;
+      z-index: 1;
+      width: 28px;
+      // height: 100%;
+      height: calc(100% - 28px);
+      margin-top: 28px;
+    }
+  }
+  &-view {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    width: calc(100% - 28px);
+    height: calc(100% - 28px);
+    overflow: auto;
+    overscroll-behavior-x: none;
+  }
+  &-scroll-area {
+    position: relative;
+    width: 5000px;
+    height: 5000px;
+    background: url('./screen.png') repeat;
+  }
+
+  &-canvas {
+    background-color: rgb(13, 42, 67);
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 50%);
+    // background-image: url('https://blade-data.oss-cn-hangzhou.aliyuncs.com/upload/20201119/7a530761aafa60ec659721e48766496f.jpg');
+    // background-size: 100%;
+  }
+
+  &-frame {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    will-change: transform;
+  }
+}
+
+.attr-side {
+  width: 200px;
+}
