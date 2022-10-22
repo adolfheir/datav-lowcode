@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import type { CSSProperties } from 'react';
 import cls from 'classnames';
 import { useDrag } from 'ahooks';
+import { plugList } from '@common/plugs/index';
 import styles from './index.scss';
 
 const componentName = 'materia-side';
@@ -42,8 +43,12 @@ export const MateriaSide: React.FC<MateriaSideProps> = (props) => {
 
   return (
     <div className={cls(styles[componentName], className)} style={style}>
-      {[0, 1, 2, 3, 4, 5, 6].map((v) => {
-        return <Drag key={v} className={cls(styles[`${componentName}-item`])} data={v}></Drag>;
+      {plugList.map((data) => {
+        return (
+          <Drag key={data['key']} className={cls(styles[`${componentName}-item`])} data={data}>
+            <img src={data['img']} />
+          </Drag>
+        );
       })}
     </div>
   );

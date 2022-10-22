@@ -5,9 +5,8 @@ import Moveable from 'react-moveable';
 import { IconEye, IconEyeInvisible } from '@arco-design/web-react/icon';
 import Guides from '@scena/react-guides';
 import { useScroll, useDrop, useKeyPress, useLatest } from 'ahooks';
-//@ts-ignore
-// import AlloyFinger from 'alloyfinger';
 import { nanoid } from 'nanoid';
+import { Loader } from '@common/plugs/index';
 import styles from './index.scss';
 import { Cmp } from './interface';
 import { useEditorStore } from './store';
@@ -92,6 +91,7 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
         left: left,
         rotate: 0,
         key: nanoid(),
+        plug: data,
       };
       setCmpList((draft) => {
         draft.push(newCmp);
@@ -253,9 +253,7 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
                 }
               });
             }}
-            onRenderEnd={({}) => {
-
-            }}
+            onRenderEnd={({}) => {}}
           />
           <div
             ref={dropRef}
@@ -270,7 +268,7 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
               transformOrigin: '50% 50% 0',
             }}
           >
-            {cmpList.map(({ key, width, height, left, top, rotate }) => {
+            {cmpList.map(({ key, width, height, left, top, rotate, plug, attr = {} }) => {
               let isSelect = selectCmpKeyList.includes(key);
               return (
                 <div
@@ -292,7 +290,9 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
                       // setSelectCmpKeyList((prev) => [...prev, key]);
                     }
                   }}
-                ></div>
+                >
+                  <Loader {...plug} cmpProps={attr} />
+                </div>
               );
             })}
           </div>

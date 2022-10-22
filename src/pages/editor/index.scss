@@ -45,6 +45,11 @@
     border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 6px;
     cursor: pointer;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: none;
+    }
   }
 }
 
@@ -107,7 +112,8 @@
   }
 
   &-canvas {
-    background-color: rgb(13, 42, 67);
+    // background-color: rgb(13, 42, 67);
+    background-color: #18181c;
     box-shadow: 0 0 30px 0 rgb(0 0 0 / 50%);
     // background-image: url('https://blade-data.oss-cn-hangzhou.aliyuncs.com/upload/20201119/7a530761aafa60ec659721e48766496f.jpg');
     // background-size: 100%;
@@ -116,7 +122,7 @@
   &-frame {
     width: 100px;
     height: 100px;
-    background-color: #ccc;
+    // background-color: #ccc;
     will-change: transform;
   }
 }
