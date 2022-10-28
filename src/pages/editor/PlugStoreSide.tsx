@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import type { CSSProperties } from 'react';
 import cls from 'classnames';
 import { useDrag } from 'ahooks';
-import { plugList } from '@common/plugs/index';
+import { plugListTree } from '@common/plugs/index';
 import styles from './index.scss';
 
 const componentName = 'materia-side';
@@ -41,15 +41,42 @@ export interface MateriaSideProps {
 export const MateriaSide: React.FC<MateriaSideProps> = (props) => {
   const { style, className } = props;
 
+  const [selectMenu, setSelectMenu] = useState(0);
+
+  let plugs = plugListTree?.[selectMenu]?.plugs ?? [];
+
   return (
     <div className={cls(styles[componentName], className)} style={style}>
-      {plugList.map((data) => {
-        return (
-          <Drag key={data['key']} className={cls(styles[`${componentName}-item`])} data={data}>
-            <img src={data['img']} />
-          </Drag>
-        );
-      })}
+      <div className={cls(styles[`${componentName}-menu`])}>
+        {plugListTree.map(({ name }, index) => {
+          const isActive = selectMenu === index;
+          return (
+            <div
+              className={cls(
+                styles[`${componentName}-menu-item`],
+                isActive && styles[`${componentName}-menu-item--active`],
+              )}
+              onClick={() => {
+                setSelectMenu(index);
+              }}
+              key={index}
+            >
+              {name}
+            </div>
+          );
+        })}
+      </div>
+      <div className={cls(styles[`${componentName}-plugs`])}>
+        {plugs.map((plug) => {
+          const { name } = plug;
+          return (
+            <Drag key={plug['key']} className={cls(styles[`${componentName}-plugs-item`])} data={plug}>
+              <img src={plug['img']} />
+              <span className={cls(styles[`${componentName}-plugs-item-span`])}>{name}</span>
+            </Drag>
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,20 @@
+.color-picker {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 28px;
+  padding: 0 15px;
+  color: #fff;
+  font-size: inherit;
+  line-height: 28px;
+  text-align: center;
+  background-color: #39393a !important;
+  border-color: #666 !important;
+  border-radius: 4px;
+  outline: 0;
+  cursor: pointer;
+  -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  // -webkit-appearance: none;
+}

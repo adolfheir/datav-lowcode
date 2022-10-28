@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import type { CSSProperties } from 'react';
 import cls from 'classnames';
 import AttrSide from './AttrSide';
-import MateriaSide from './MateriaSide';
+import PlugStoreSide from './PlugStoreSide';
 import Playground from './Playgroud';
 import styles from './index.scss';
 import { EditorStoreProvider } from './store';
@@ -22,7 +22,7 @@ export const Editor: React.FC<EditorProps> = (props) => {
         <div className={cls(styles[`${componentName}-toolbar`])}>xx大屏管理系统</div>
         <div className={cls(styles[`${componentName}-wrapper`])}>
           <div className={cls(styles[`${componentName}-left`])}>
-            <MateriaSide />
+            <PlugStoreSide />
           </div>
           <div className={cls(styles[`${componentName}-view`])}>
             <Playground />
