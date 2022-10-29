@@ -77,6 +77,12 @@ export const [useEditorStore, EditorStoreProvider] = createStore(() => {
     );
   };
 
+  const exportData = () => {};
+
+  const importData = () => {
+
+  };
+
   useDebounceEffect(
     () => {
       save();
@@ -107,5 +113,8 @@ export const [useEditorStore, EditorStoreProvider] = createStore(() => {
     setSelectPlugId,
     selectPlug,
     changeSelectPlug,
+
+    /* misc */
+    save,
   };
 });

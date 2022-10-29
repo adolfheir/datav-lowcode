@@ -2,8 +2,9 @@ import React, { useMemo, useState } from 'react';
 import type { CSSProperties } from 'react';
 import cls from 'classnames';
 import AttrSide from './AttrSide';
-import PlugStoreSide from './PlugStoreSide';
+import LeftBtnGroup from './LeftBtnGroup';
 import Playground from './Playgroud';
+import PlugStoreSide from './PlugStoreSide';
 import styles from './index.scss';
 import { EditorStoreProvider } from './store';
 
@@ -19,7 +20,10 @@ export const Editor: React.FC<EditorProps> = (props) => {
   return (
     <EditorStoreProvider>
       <div className={cls(styles[componentName], className)} style={style}>
-        <div className={cls(styles[`${componentName}-toolbar`])}>xx大屏管理系统</div>
+        <div className={cls(styles[`${componentName}-toolbar`])}>
+          xx大屏管理系统
+          <LeftBtnGroup />
+        </div>
         <div className={cls(styles[`${componentName}-wrapper`])}>
           <div className={cls(styles[`${componentName}-left`])}>
             <PlugStoreSide />

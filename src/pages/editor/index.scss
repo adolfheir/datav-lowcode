@@ -5,6 +5,7 @@
   background-color: #18181c;
 
   &-toolbar {
+    position: relative;
     display: flex;
     flex: none;
     align-items: center;
@@ -30,6 +31,11 @@
     flex: none;
     // overflow: hidden;
   }
+}
+
+.left-btn-group {
+  position: absolute;
+  right: 32px;
 }
 
 .materia-side {
