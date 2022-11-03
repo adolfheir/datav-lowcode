@@ -36,6 +36,13 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
   const [isGuideShow, setIsGuideShow] = useState(true);
   const [guideList, setGuideList] = useState<{ x: number[]; y: number[] }>({ x: [], y: [] });
 
+  // const verticalGuidelines = useMemo(() => {
+  //   return plugList.map((v) => v['boxStyle']['left']);
+  // }, [plugList]);
+  // const horizontalGuidelines = useMemo(() => {
+  //   return plugList.map((v) => v['boxStyle']['top']);
+  // }, [plugList]);
+
   /* ============================== transform =============================== */
   const [scale, setScale] = useState(0.5);
   const view = useRef<HTMLDivElement | null>(null);
@@ -61,7 +68,6 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
     setScale((pre) => pre - 0.02);
   });
   useEffect(() => {
-    // const fitScale =
     view.current?.scrollTo({
       left: offsetLeft - MARGIN,
       top: offsetTop - MARGIN,
@@ -177,6 +183,7 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
             snappable={true} //是否可以将目标对齐
             snapThreshold={5} //吸附
             isDisplaySnapDigit={true}
+            elementGuidelines={Object.values(plugRefs.current)}
             target={targetList}
             onDragStart={(e) => {
               e.set([selectPlug!.boxStyle.left, selectPlug!.boxStyle.top]);
@@ -267,7 +274,6 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
             {bgImg && (
               <div className={cls(styles[`${componentName}-frame-bg`])} style={{ backgroundImage: `url(${bgImg})` }} />
             )}
-
             {plugList.map((plugIns) => {
               const { uuid, boxStyle, selectAble = true } = plugIns;
               let isSelect = uuid === selectPlugId;
