@@ -7,9 +7,9 @@ import Guides from '@scena/react-guides';
 import { useScroll, useDrop, useKeyPress, useLatest } from 'ahooks';
 import { nanoid } from 'nanoid';
 import Loader from '@common/plugs/Loader';
+import { useEditorStore } from './editorStore';
 import styles from './index.scss';
 import { Plug, PlugIns } from './interface';
-import { useEditorStore } from './store';
 
 const componentName = 'playground';
 
@@ -29,7 +29,8 @@ const MARGIN = 40;
 
 export const Playground: React.FC<PlaygroundProps> = (props) => {
   const { style, className } = props;
-  const { pageSize, plugList, setPlugList, selectPlug, selectPlugId, setSelectPlugId } = useEditorStore();
+  const { pageSize, bgColor, bgImg, plugList, setPlugList, selectPlug, selectPlugId, setSelectPlugId, deletePlug } =
+    useEditorStore();
   const { width: PAGE_WIDTH, height: PAGE_HEIGHT } = pageSize;
   /* ============================== 辅助线 =============================== */
   const [isGuideShow, setIsGuideShow] = useState(true);
@@ -52,12 +53,12 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
   useKeyPress(['meta.uparrow'], (e) => {
     e.stopPropagation();
     e.preventDefault();
-    setScale((pre) => pre + 0.01);
+    setScale((pre) => pre + 0.02);
   });
   useKeyPress(['meta.downarrow'], (e) => {
     e.stopPropagation();
     e.preventDefault();
-    setScale((pre) => pre - 0.01);
+    setScale((pre) => pre - 0.02);
   });
   useEffect(() => {
     // const fitScale =
@@ -88,7 +89,7 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
       };
 
       setPlugList((draft) => {
-        draft.push({ ...plug, boxStyle: newBoxStyle, uuid: nanoid() });
+        draft.push({ ...plug, boxStyle: newBoxStyle, selectAble: true, uuid: nanoid() });
       });
     },
   });
@@ -262,8 +263,13 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
               transformOrigin: '50% 50% 0',
             }}
           >
+            {/* 实现bg */}
+            {bgImg && (
+              <div className={cls(styles[`${componentName}-frame-bg`])} style={{ backgroundImage: `url(${bgImg})` }} />
+            )}
+
             {plugList.map((plugIns) => {
-              const { uuid, boxStyle } = plugIns;
+              const { uuid, boxStyle, selectAble = true } = plugIns;
               let isSelect = uuid === selectPlugId;
               const { width, height, left, rotate, top } = boxStyle;
 
@@ -281,13 +287,16 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
                     transform: `translate(${left}px, ${top}px) rotate(${rotate}deg)`,
                   }}
                   onClick={(e) => {
-                    e.stopPropagation();
-                    if (!isSelect) {
-                      setSelectPlugId(uuid);
+                    if (selectAble) {
+                      e.stopPropagation();
+                      if (!isSelect) {
+                        setSelectPlugId(uuid);
+                      }
                     }
                   }}
                 >
                   <Loader ins={plugIns} />
+                  <div className={cls(styles[`${componentName}-frame-mask`])}></div>
                 </div>
               );
             })}

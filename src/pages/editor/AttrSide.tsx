@@ -1,13 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import type { CSSProperties } from 'react';
+import { get } from 'lodash';
 import cls from 'classnames';
 import { Radio, InputNumber, Input, Select, Divider, Button } from '@arco-design/web-react';
 import ColorPicker from '@common/components/ColorPicker';
+import EditorDialog from '@common/components/MonacoEditor/Dialog';
+import openModal from '@common/utils/openModal';
 import { animateList } from '@components/Animate';
 import styles from './index.scss';
-import { useEditorStore } from './store';
+import { useEditorStore } from './editorStore';
 
 const componentName = 'attr-side';
+
+let tpl = `//注入3个变量
+//getPrevProps：获取组件配置
+//update：更新组件配置
+//eventBus：全局事件总线
+//@ts-ignore
+const { getPrevProps, update, eventBus } = __inject__;
+let prevProps = getPrevProps()
+console.log("getPrevProps",getPrevProps)
+update(prevProps)`;
 
 export interface AttrSideProps {
   style?: CSSProperties;
@@ -142,7 +155,11 @@ export const AttrSide: React.FC<AttrSideProps> = (props) => {
                       ['y-first']: 'y轴铺满，x轴自适应滚动',
                       ['resize']: '强行拉伸画面，填充所有视图',
                     };
-                    return <Radio value={key}>{mapping[key as keyof typeof mapping]}</Radio>;
+                    return (
+                      <Radio key={key} value={key}>
+                        {mapping[key as keyof typeof mapping]}
+                      </Radio>
+                    );
                   })}
                 </Radio.Group>
               </div>
@@ -240,7 +257,7 @@ export const AttrSide: React.FC<AttrSideProps> = (props) => {
                   }}
                 >
                   {animateList.map(({ value, label }, index) => (
-                    <Select.Option key={value} value={value}>
+                    <Select.Option key={index} value={value}>
                       {label}
                     </Select.Option>
                   ))}
@@ -253,7 +270,25 @@ export const AttrSide: React.FC<AttrSideProps> = (props) => {
             <div className={cls(styles[`${componentName}-page-item`])}>
               <div className={cls(styles[`${componentName}-page-label`])}>组件props:</div>
               <div className={cls(styles[`${componentName}-page-value`])}>
-                <Button type="secondary">设置</Button>
+                <Button
+                  type="secondary"
+                  style={{
+                    justifyContent: 'flex-start',
+                  }}
+                  onClick={() => {
+                    let { destroy } = openModal(EditorDialog, {
+                      onClose: (isOk, code) => {
+                        if (isOk && code) {
+                          changeSelectPlug('plugProps.__inject__', code?.trim());
+                        }
+                        destroy();
+                      },
+                      code: get(selectPlug, 'plugProps.__inject__', tpl),
+                    });
+                  }}
+                >
+                  设置
+                </Button>
               </div>
             </div>
           </div>

@@ -18,6 +18,7 @@ export interface AppProps {
 const Editor = createLoadable(() => import('@pages/editor'));
 const Home = createLoadable(() => import('@pages/home'));
 const Preview = createLoadable(() => import('@pages/preview'));
+const Test = createLoadable(() => import('@pages/test'));
 const routerList = [
   {
     path: '/home',
@@ -30,6 +31,10 @@ const routerList = [
   {
     path: '/preview',
     page: Preview,
+  },
+  {
+    path: '/test',
+    page: Test,
   },
 ];
 

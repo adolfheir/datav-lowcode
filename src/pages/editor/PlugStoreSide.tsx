@@ -3,6 +3,8 @@ import type { CSSProperties } from 'react';
 import cls from 'classnames';
 import { useDrag } from 'ahooks';
 import { plugListTree } from '@common/plugs/index';
+import type { Plug } from '@common/plugs/interface';
+import defauleImg from './img/default.png';
 import styles from './index.scss';
 
 const componentName = 'materia-side';
@@ -67,12 +69,12 @@ export const MateriaSide: React.FC<MateriaSideProps> = (props) => {
         })}
       </div>
       <div className={cls(styles[`${componentName}-plugs`])}>
-        {plugs.map((plug) => {
-          const { name } = plug;
+        {plugs.map((plug: Plug) => {
+          const { name, img = defauleImg } = plug;
           return (
             <Drag key={plug['key']} className={cls(styles[`${componentName}-plugs-item`])} data={plug}>
-              <img src={plug['img']} />
-              <span className={cls(styles[`${componentName}-plugs-item-span`])}>{name}</span>
+              <div className={cls(styles[`${componentName}-plugs-item-span`])}>{name}</div>
+              <img src={img} />
             </Drag>
           );
         })}

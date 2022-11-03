@@ -9,9 +9,9 @@ export function setLoadingComponent(cmp: ReactElement): void {
 export function createLoadable(loader: () => Promise<{ default: ComponentType<any> }>, loading?: ReactElement | null) {
   let _LoadingComponent = loading ?? LoadingComponent;
   const LazyComponet = React.lazy(loader);
-  return () => (
+  return (props: any) => (
     <React.Suspense fallback={_LoadingComponent}>
-      <LazyComponet />
+      <LazyComponet {...props} />
     </React.Suspense>
   );
 }

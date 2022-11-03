@@ -1,0 +1,19 @@
+.monaco-editor-dialog {
+  width: 80vw;
+  :global {
+    & .arco-modal-content {
+      width: 80vw;
+      padding: 0px;
+      // height: 590px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 460px;
+    width: 80vw;
+    height: 70vh;
+  }
+}

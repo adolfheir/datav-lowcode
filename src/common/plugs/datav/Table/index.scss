@@ -1,0 +1,17 @@
+.table {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+
+  :global {
+    & .header-item {
+      color: rgb(154, 168, 212);
+      font-weight: bold !important;
+      font-size: 12px;
+    }
+    & .row-item {
+      color: rgb(154, 168, 212);
+      font-size: 12px;
+    }
+  }
+}

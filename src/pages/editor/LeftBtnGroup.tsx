@@ -2,11 +2,13 @@ import React, { useMemo } from 'react';
 import type { CSSProperties } from 'react';
 import cls from 'classnames';
 import { useNavigate } from 'react-router-dom';
-import { Button, Tooltip } from '@arco-design/web-react';
-import { IconSend, IconExport, IconImport, IconSave } from '@arco-design/web-react/icon';
+import { Button, Message, Tooltip } from '@arco-design/web-react';
+import { IconAlignRight, IconExport, IconAlignCenter, IconAlignLeft } from '@arco-design/web-react/icon';
 import qs from 'query-string';
+import Uploader from '@components/Uploader/index';
 import styles from './index.scss';
-import { useEditorStore } from './store';
+import { useLayoutStore } from './layoutStore';
+import { useEditorStore } from './editorStore';
 
 const ButtonGroup = Button.Group;
 
@@ -19,46 +21,35 @@ export interface LeftBtnGroupProps {
 export const LeftBtnGroup: React.FC<LeftBtnGroupProps> = (props) => {
   const { style, className } = props;
 
-  const { save } = useEditorStore();
-  const navigator = useNavigate();
+  const { isPlugsShow, isAttrShow, isLayerShow, setIsLayerShow, setIsAttrShow, setIsPlugsShow } = useLayoutStore();
 
   return (
     <div className={cls(styles[componentName], className)} style={style}>
       <ButtonGroup>
-        <Tooltip content="导入">
+        <Tooltip content="插件">
           <Button
-            type="primary"
-            icon={<IconImport />}
+            type={isPlugsShow ? 'primary' : 'default'}
+            icon={<IconAlignLeft />}
             onClick={() => {
-              save();
+              setIsPlugsShow((prev) => !prev);
             }}
           />
         </Tooltip>
-        <Tooltip content="导出">
+        <Tooltip content="图层">
           <Button
-            type="primary"
-            icon={<IconExport />}
+            type={isLayerShow ? 'primary' : 'default'}
+            icon={<IconAlignCenter />}
             onClick={() => {
-              save();
+              setIsLayerShow((prev) => !prev);
             }}
           />
         </Tooltip>
-        <Tooltip content="保存">
+        <Tooltip content="属性">
           <Button
-            type="primary"
-            icon={<IconSave />}
+            type={isAttrShow ? 'primary' : 'default'}
+            icon={<IconAlignRight />}
             onClick={() => {
-              save();
-            }}
-          />
-        </Tooltip>
-        <Tooltip content="预览">
-          <Button
-            type="primary"
-            icon={<IconSend />}
-            onClick={() => {
-              let { page = '' } = qs.parse(location.search);
-              navigator(`/preview?page=${page}`, {});
+              setIsAttrShow((prev) => !prev);
             }}
           />
         </Tooltip>

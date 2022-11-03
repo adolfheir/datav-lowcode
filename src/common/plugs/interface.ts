@@ -16,6 +16,8 @@ export interface Plug {
     animate: string | null
   }>,
   plugProps?: {
+    //注入函数 特殊处理
+    __inject__: string;
     [key: string]: any
   },
   plugEvent?: {
@@ -25,5 +27,6 @@ export interface Plug {
 
 export interface PlugIns extends Omit<Plug, "boxStyle"> {
   uuid: string
+  selectAble: boolean
   boxStyle: Required<NonNullable<Plug["boxStyle"]>>
 }

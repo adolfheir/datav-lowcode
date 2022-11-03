@@ -18,7 +18,7 @@ export const Index: React.FC<IndexProps> = (props) => {
     <ScrollRankingBoard
       config={{
         data: data,
-        config,
+        ...config,
       }}
     />
   );
