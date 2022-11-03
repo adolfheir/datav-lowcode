@@ -26,7 +26,13 @@ export const Index: React.FC<IndexProps> = (props) => {
         backgroundColor: bgColor,
       }}
     >
-      <div style={{ width: '100%', height: '100%' }}>
+      <div
+        className={cls(styles[componentName])}
+        style={{
+          // backgroundColor: `rgba(${bgColor?.['r']}, ${bgColor?.['g']}, ${bgColor?.['b']})`,
+          backgroundImage: `url(${bgImg})`,
+        }}
+      >
         {plugList.map((plugIns) => {
           const { uuid, boxStyle } = plugIns;
           // let isSelect = uuid === selectPlugId;

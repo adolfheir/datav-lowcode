@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useRef, useState, MutableRefObject } from 'react';
 import type { CSSProperties } from 'react';
 import cls from 'classnames';
 import Moveable from 'react-moveable';
@@ -10,6 +10,7 @@ import Loader from '@common/plugs/Loader';
 import { useEditorStore } from './editorStore';
 import styles from './index.scss';
 import { Plug, PlugIns } from './interface';
+import useKeybound from './useKeybound';
 
 const componentName = 'playground';
 
@@ -32,6 +33,7 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
   const { pageSize, bgColor, bgImg, plugList, setPlugList, selectPlug, selectPlugId, setSelectPlugId, deletePlug } =
     useEditorStore();
   const { width: PAGE_WIDTH, height: PAGE_HEIGHT } = pageSize;
+  const view = useRef<HTMLDivElement>(null);
   /* ============================== 辅助线 =============================== */
   const [isGuideShow, setIsGuideShow] = useState(true);
   const [guideList, setGuideList] = useState<{ x: number[]; y: number[] }>({ x: [], y: [] });
@@ -45,7 +47,7 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
 
   /* ============================== transform =============================== */
   const [scale, setScale] = useState(0.5);
-  const view = useRef<HTMLDivElement | null>(null);
+
   const scroll = useScroll(view);
   let { offsetLeft, offsetTop } = useMemo(() => {
     let offsetLeft = DEFAULT_SCROLL_LEFT + PAGE_WIDTH / 2 - (PAGE_WIDTH / 2) * scale;
@@ -112,6 +114,9 @@ export const Playground: React.FC<PlaygroundProps> = (props) => {
   const targetList = useMemo(() => {
     return selectPlugId ? [plugRefs.current?.[selectPlugId]] : [];
   }, [selectPlugId]);
+
+  /* ============================== 快捷键 =============================== */
+  useKeybound();
 
   return (
     <div
