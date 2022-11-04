@@ -18,7 +18,13 @@ export const Loader = ({ ins }: IProps) => {
 
   /* ============================== 实例 =============================== */
   const Editor = useMemo(() => {
-    return createLoadable(() => import(`./${loader}`));
+    //@ts-ignore
+    const modules = import.meta.glob('./*/*/*.tsx');
+    console.log('modules', modules);
+    let key = `./${loader}.tsx`;
+    let module = modules[key];
+    // console.log('module', module);
+    return createLoadable(module);
   }, [loader]);
 
   /* ============================== 编辑器属性 =============================== */
