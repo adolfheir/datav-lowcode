@@ -14,15 +14,15 @@ export interface RestoreSizeProps {
 }
 export const RestoreSize: React.FC<RestoreSizeProps> = (props) => {
   const { style, className, children } = props;
-  const { scale = 0 } = useContext(FullScreenContainerContext);
+  const { scalex = 0, scaley = 1 } = useContext(FullScreenContainerContext);
 
   return (
     <div
       className={cls(styles[componentName], className)}
       style={{
-        width: `${100 * scale}%`,
-        height: `${100 * scale}%`,
-        transform: `scale(${1 / scale})`,
+        width: `${100 * scalex}%`,
+        height: `${100 * scaley}%`,
+        transform: `scaleX(${1 / scalex}) scaleY(${1 / scaley})`,
         transformOrigin: 'left top',
       }}
     >

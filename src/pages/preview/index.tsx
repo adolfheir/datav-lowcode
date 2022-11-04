@@ -3,6 +3,7 @@ import type { CSSProperties } from 'react';
 import cls from 'classnames';
 import qs from 'query-string';
 import Loader from '@common/plugs/Loader';
+
 import FullScreenContainer from '@components/FullScreenContainer';
 import styles from './index.scss';
 import { EditorStoreProvider, useEditorStore } from './store';
@@ -21,15 +22,15 @@ export const Index: React.FC<IndexProps> = (props) => {
     <FullScreenContainer
       designWidth={pageSize.width}
       designHeight={pageSize.height}
+      objectFit={fullScreenType}
       style={{
-        //@ts-ignore
-        backgroundColor: bgColor,
+        backgroundColor: `rgba(${bgColor?.['r']}, ${bgColor?.['g']}, ${bgColor?.['b']})`,
       }}
     >
       <div
         className={cls(styles[componentName])}
         style={{
-          // backgroundColor: `rgba(${bgColor?.['r']}, ${bgColor?.['g']}, ${bgColor?.['b']})`,
+
           backgroundImage: `url(${bgImg})`,
         }}
       >

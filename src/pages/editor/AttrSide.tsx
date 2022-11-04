@@ -7,8 +7,8 @@ import ColorPicker from '@common/components/ColorPicker';
 import EditorDialog from '@common/components/MonacoEditor/Dialog';
 import openModal from '@common/utils/openModal';
 import { animateList } from '@components/Animate';
-import styles from './index.scss';
 import { useEditorStore } from './editorStore';
+import styles from './index.scss';
 
 const componentName = 'attr-side';
 
@@ -148,12 +148,13 @@ export const AttrSide: React.FC<AttrSideProps> = (props) => {
                     setFullScreenType(value);
                   }}
                 >
-                  {['fit', 'x-first', 'y-first', 'resize'].map((key) => {
+                  {['contain', 'cover', 'fill', 'x-first', 'y-first'].map((key) => {
                     const mapping = {
-                      ['fit']: '自适应比例展示,页面会有留白',
-                      ['x-first']: 'x轴铺满，y轴自适应滚动',
-                      ['y-first']: 'y轴铺满，x轴自适应滚动',
-                      ['resize']: '强行拉伸画面，填充所有视图',
+                      ['contain']: '保持比例,页面会有留白',
+                      ['cover']: '保持比例，页面会有滚动条',
+                      ['fill']: '强行拉伸画面，填充所有视图',
+                      ['x-first']: 'x轴铺满，y轴自适应滚动或留白',
+                      ['y-first']: 'y轴铺满，x轴自适应滚动或留白',
                     };
                     return (
                       <Radio key={key} value={key}>

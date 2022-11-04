@@ -2,10 +2,13 @@ import React, { useMemo } from 'react';
 import type { CSSProperties } from 'react';
 import cls from 'classnames';
 import { useNavigate } from 'react-router-dom';
-import { Button, Grid } from '@arco-design/web-react';
+import { Button, Grid, Modal } from '@arco-design/web-react';
 import { IconFolderAdd, IconOrderedList, IconApps, IconDelete, IconEdit } from '@arco-design/web-react/icon';
 import { useLocalStorageState } from 'ahooks';
 import { nanoid } from 'nanoid';
+import openModal from '@common/utils/openModal';
+import CreatModal from './CreatModal';
+import img404 from './img/image-404.png';
 import styles from './index.scss';
 import { Page } from './interface';
 
@@ -36,14 +39,21 @@ export const Index: React.FC<IndexProps> = (props) => {
           <Button
             type="outline"
             onClick={() => {
-              setPageList([
-                ...pageList,
-                {
-                  uuid: nanoid(),
-                  name: `大图`,
-                  img: '',
+              let { destroy } = openModal(CreatModal, {
+                onClose: (isOk, name) => {
+                  if (isOk && name) {
+                    setPageList([
+                      ...pageList,
+                      {
+                        uuid: nanoid(),
+                        name: name,
+                        img: '',
+                      },
+                    ]);
+                  }
+                  destroy();
                 },
-              ]);
+              });
             }}
           >
             <IconFolderAdd />
@@ -74,7 +84,7 @@ export const Index: React.FC<IndexProps> = (props) => {
               <Col span={6} key={uuid}>
                 <div className={cls(styles[`${componentName}-list-item`])}>
                   <div className={cls(styles[`${componentName}-list-item-img`])}>
-                    <img src="" alt="" />
+                    <img src={img404} alt="" />
                   </div>
                   <div className={cls(styles[`${componentName}-list-item-info`])}>
                     <span>{name}</span>
@@ -87,7 +97,22 @@ export const Index: React.FC<IndexProps> = (props) => {
                           navigator(`/editor?page=${uuid}`, {});
                         }}
                       />
-                      <Button shape="circle" icon={<IconDelete />} />
+                      <Button
+                        shape="circle"
+                        icon={<IconDelete />}
+                        onClick={() => {
+                          Modal.confirm({
+                            title: '确认删除？',
+                            content: '删除后大屏数据不可恢复',
+                            okButtonProps: {
+                              status: 'danger',
+                            },
+                            onOk: () => {
+                              setPageList(pageList.filter((v) => v['uuid'] !== uuid));
+                            },
+                          });
+                        }}
+                      />
                     </span>
                   </div>
                 </div>

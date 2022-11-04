@@ -2,7 +2,7 @@ import { createContext } from 'react';
 
 export const FullScreenContainerContext = createContext<
   Partial<{
-    scale: number;
-    // scaleH: number;
+    scalex: number;
+    scaley: number;
   }>
->({ scale: 1 });
+>({ scalex: 1, scaley: 1 });

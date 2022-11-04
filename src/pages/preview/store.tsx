@@ -16,7 +16,7 @@ export const [useEditorStore, EditorStoreProvider] = createStore(() => {
   });
   const [bgColor, setBgColor] = useState<RGBColor>({ r: 0, g: 0, b: 0, a: 1 });
   const [bgImg, setBgImg] = useState('');
-  const [fullScreenType, setFullScreenType] = useState<'fit' | 'x-first' | 'y-first' | 'resize'>('fit');
+  const [fullScreenType, setFullScreenType] = useState<'contain' | 'cover' | 'fill' | 'x-first' | 'y-first'>('contain');
 
   /* ============================== 组件 =============================== */
   const [plugList, setPlugList] = useImmer<PlugIns[]>([]);
