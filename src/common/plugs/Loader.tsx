@@ -14,7 +14,7 @@ interface IProps {
 }
 
 export const Loader = ({ ins }: IProps) => {
-  const { loader, uuid, name, plugProps } = ins;
+  const { loader, uuid, name, plugProps, defaultProps } = ins;
 
   /* ============================== 实例 =============================== */
   const Editor = useMemo(() => {
@@ -43,6 +43,7 @@ export const Loader = ({ ins }: IProps) => {
           getPrevProps,
           update,
           eventBus,
+          defaultProps,
         },
       };
       evalCode(

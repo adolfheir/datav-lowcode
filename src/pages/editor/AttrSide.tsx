@@ -17,10 +17,11 @@ export const generateTpl = (prop = {}) => {
 //getPrevProps：获取组件配置
 //update：更新组件配置
 //eventBus：全局事件总线
+//组件默认属性
+let defaultData=${JSON.stringify(prop, null, '\t')}
 //@ts-ignore
-const { getPrevProps, update, eventBus } = __inject__;
+const { getPrevProps, update, eventBus ,defaultProps } = __inject__;
 let prevProps = getPrevProps()
-let defaulePorps=${JSON.stringify(prop, null, '\t')}
 console.log("getPrevProps",getPrevProps)
 update(prevProps)`;
   return tpl;

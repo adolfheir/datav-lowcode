@@ -68,6 +68,8 @@ export const MonacoEditorDialog: React.FC<MonacoEditorDialogProps> = (props) => 
             selectOnLineNumbers: true,
             matchBrackets: 'near',
             automaticLayout: true,
+            folding:true,
+            foldingImportsByDefault:true
           }}
           onMount={(editor) => {
             //@ts-ignore
