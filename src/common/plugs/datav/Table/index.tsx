@@ -20,11 +20,15 @@ export const Index: React.FC<IndexProps> = (props) => {
       className={cls(styles[componentName])}
       config={{
         ...config,
-        ...defaultConfig,
       }}
     />
   );
 };
+
+export const defaultProps = {
+  config: defaultConfig,
+};
+Index.defaultProps = defaultProps;
 
 Index.displayName = 'Index';
 

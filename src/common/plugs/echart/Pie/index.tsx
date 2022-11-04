@@ -19,6 +19,11 @@ export const Pie: React.FC<PieProps> = (props) => {
   return <ReactECharts style={{ width: '100%', height: '100%' }} option={options} theme={options['theme']} />;
 };
 
+export const defaultProps = {
+  options: mockOption,
+};
+Pie.defaultProps = defaultProps;
+
 Pie.displayName = 'Pie';
 
 export default Pie;

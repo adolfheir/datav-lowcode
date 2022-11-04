@@ -11,18 +11,20 @@ const componentName = 'Index';
 export interface IndexProps {
   style?: CSSProperties;
   className?: string | string[];
+  config: {};
 }
 export const Index: React.FC<IndexProps> = (props) => {
-  const { style, className, ...config } = props;
-  return (
-    <ScrollRankingBoard
-      config={{
-        data: data,
-        ...config,
-      }}
-    />
-  );
+  const { style, className, config } = props;
+  return <ScrollRankingBoard {...props} />;
 };
+
+export const defaultProps = {
+  config: {
+    data: data,
+  },
+};
+
+Index.defaultProps = defaultProps;
 
 Index.displayName = 'Index';
 

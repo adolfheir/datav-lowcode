@@ -11,8 +11,7 @@ export interface IndexProps {
   className?: string | string[];
 }
 export const Index: React.FC<IndexProps> = (props) => {
-  const { content = '请输入文本', ...others } = props;
-  console.log('props1', props);
+  const { content, ...others } = props;
 
   return (
     <div className={cls(styles[componentName])} {...(others as any)}>
@@ -20,6 +19,12 @@ export const Index: React.FC<IndexProps> = (props) => {
     </div>
   );
 };
+
+export const defaultProps = {
+  content: '请输入文本',
+};
+
+Index.defaultProps = defaultProps;
 
 Index.displayName = 'Index';
 

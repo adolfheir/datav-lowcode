@@ -20,13 +20,21 @@ export const Index: React.FC<IndexProps> = (props) => {
       <DigitalFlop
         //@ts-ignore
         config={{
-          ...data,
           ...config,
         }}
       />
     </div>
   );
 };
+
+export const defaultProps = {
+  config: {
+    data: data,
+  },
+};
+
+Index.defaultProps = defaultProps;
+
 
 Index.displayName = 'Index';
 

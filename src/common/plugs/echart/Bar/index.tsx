@@ -14,10 +14,15 @@ export interface BarProps {
   options?: EChartsOption;
 }
 export const Bar: React.FC<BarProps> = (props) => {
-  const { style, className, options = mockOption } = props;
+  const { style, className, options } = props;
 
   return <ReactECharts style={{ width: '100%', height: '100%' }} option={options} theme={options['theme']} />;
 };
+
+export const defaultProps = {
+  options: mockOption,
+};
+Bar.defaultProps = defaultProps;
 
 Bar.displayName = 'Bar';
 

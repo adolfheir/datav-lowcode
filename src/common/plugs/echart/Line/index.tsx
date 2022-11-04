@@ -18,6 +18,11 @@ export const Line: React.FC<LineProps> = (props) => {
   return <ReactECharts style={{ width: '100%', height: '100%' }} option={options} theme={options['theme']} />;
 };
 
+export const defaultProps = {
+  options: mockOption,
+};
+Line.defaultProps = defaultProps;
+
 Line.displayName = 'Line';
 
 export default Line;

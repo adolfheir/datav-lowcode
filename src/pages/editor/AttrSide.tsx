@@ -12,15 +12,19 @@ import styles from './index.scss';
 
 const componentName = 'attr-side';
 
-let tpl = `//注入3个变量
+export const generateTpl = (prop = {}) => {
+  let tpl = `//注入3个变量
 //getPrevProps：获取组件配置
 //update：更新组件配置
 //eventBus：全局事件总线
 //@ts-ignore
 const { getPrevProps, update, eventBus } = __inject__;
 let prevProps = getPrevProps()
+let defaulePorps=${JSON.stringify(prop, null, '\t')}
 console.log("getPrevProps",getPrevProps)
 update(prevProps)`;
+  return tpl;
+};
 
 export interface AttrSideProps {
   style?: CSSProperties;
@@ -284,7 +288,7 @@ export const AttrSide: React.FC<AttrSideProps> = (props) => {
                         }
                         destroy();
                       },
-                      code: get(selectPlug, 'plugProps.__inject__', tpl),
+                      code: get(selectPlug, 'plugProps.__inject__', generateTpl(selectPlug?.defaultProps ?? {})),
                     });
                   }}
                 >

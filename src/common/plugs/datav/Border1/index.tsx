@@ -16,6 +16,10 @@ export const Index: React.FC<IndexProps> = (props) => {
   return <BorderBox1></BorderBox1>;
 };
 
+export const defaultProps = {};
+
+Index.defaultProps = defaultProps;
+
 Index.displayName = 'Index';
 
 export default Index;

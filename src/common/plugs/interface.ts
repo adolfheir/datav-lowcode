@@ -15,6 +15,9 @@ export interface Plug {
     rotate: number,
     animate: string | null
   }>,
+  defaultProps?: {
+    [key: string]: any
+  },
   plugProps?: {
     //注入函数 特殊处理
     __inject__: string;
