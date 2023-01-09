@@ -7,9 +7,9 @@ import LeftBtnGroup from './LeftBtnGroup';
 import Playground from './Playgroud';
 import PlugStoreSide from './PlugStoreSide';
 import RightBtnGroup from './RightBtnGroup';
+import { EditorStoreProvider } from './editorStore';
 import styles from './index.scss';
 import { LayoutStoreStore, useLayoutStore } from './layoutStore';
-import { EditorStoreProvider } from './editorStore';
 
 const componentName = 'editor';
 

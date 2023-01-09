@@ -6,9 +6,9 @@ import { Button, Message, Tooltip } from '@arco-design/web-react';
 import { IconAlignRight, IconExport, IconAlignCenter, IconAlignLeft } from '@arco-design/web-react/icon';
 import qs from 'query-string';
 import Uploader from '@components/Uploader/index';
+import { useEditorStore } from './editorStore';
 import styles from './index.scss';
 import { useLayoutStore } from './layoutStore';
-import { useEditorStore } from './editorStore';
 
 const ButtonGroup = Button.Group;
 

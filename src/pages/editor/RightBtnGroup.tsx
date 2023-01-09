@@ -6,8 +6,8 @@ import { Button, Message, Tooltip } from '@arco-design/web-react';
 import { IconSend, IconExport, IconImport, IconSave } from '@arco-design/web-react/icon';
 import qs from 'query-string';
 import Uploader from '@components/Uploader/index';
-import styles from './index.scss';
 import { useEditorStore } from './editorStore';
+import styles from './index.scss';
 
 const ButtonGroup = Button.Group;
 
@@ -77,7 +77,7 @@ export const RightBtnGroup: React.FC<RightBtnGroupProps> = (props) => {
             type="primary"
             icon={<IconSend />}
             onClick={() => {
-              save()
+              save();
               let { page = '' } = qs.parse(location.search);
               navigator(`/preview?page=${page}`, {});
             }}

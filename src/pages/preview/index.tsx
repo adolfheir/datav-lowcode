@@ -3,7 +3,6 @@ import type { CSSProperties } from 'react';
 import cls from 'classnames';
 import qs from 'query-string';
 import Loader from '@common/plugs/Loader';
-
 import FullScreenContainer from '@components/FullScreenContainer';
 import styles from './index.scss';
 import { EditorStoreProvider, useEditorStore } from './store';
@@ -30,7 +29,6 @@ export const Index: React.FC<IndexProps> = (props) => {
       <div
         className={cls(styles[componentName])}
         style={{
-
           backgroundImage: `url(${bgImg})`,
         }}
       >

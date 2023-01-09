@@ -1,35 +1,35 @@
-import { CSSProperties } from "react"
+import { CSSProperties } from 'react';
 
 export interface Plug {
-  loader: string,
-  name: string
-  key: string,
+  loader: string;
+  name: string;
+  key: string;
   /* 缩略图 */
-  img?: string,
+  img?: string;
   /* 盒子的样式 */
   boxStyle?: Partial<{
-    width: number,
-    height: number,
-    top: number,
-    left: number,
-    rotate: number,
-    animate: string | null
-  }>,
+    width: number;
+    height: number;
+    top: number;
+    left: number;
+    rotate: number;
+    animate: string | null;
+  }>;
   defaultProps?: {
-    [key: string]: any
-  },
+    [key: string]: any;
+  };
   plugProps?: {
     //注入函数 特殊处理
     __inject__: string;
-    [key: string]: any
-  },
+    [key: string]: any;
+  };
   plugEvent?: {
-    [key: string]: Function
-  }
+    [key: string]: Function;
+  };
 }
 
-export interface PlugIns extends Omit<Plug, "boxStyle"> {
-  uuid: string
-  selectAble: boolean
-  boxStyle: Required<NonNullable<Plug["boxStyle"]>>
+export interface PlugIns extends Omit<Plug, 'boxStyle'> {
+  uuid: string;
+  selectAble: boolean;
+  boxStyle: Required<NonNullable<Plug['boxStyle']>>;
 }

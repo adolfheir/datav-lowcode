@@ -1,11 +1,10 @@
-import react, { useRef, MutableRefObject } from "react"
+import react, { useRef, MutableRefObject } from 'react';
+import { cloneDeep, get } from 'lodash';
 import { useDebounceEffect, useLatest, useKeyPress } from 'ahooks';
-import { cloneDeep, get } from "lodash"
-import { nanoid } from "nanoid"
-import { useEditorStore } from "./editorStore"
+import { nanoid } from 'nanoid';
+import { useEditorStore } from './editorStore';
 
 const useKeybound = () => {
-
   const {
     /* bgcolor */
     pageSize,
@@ -30,15 +29,15 @@ const useKeybound = () => {
     /* misc */
     save,
     exportData,
-    importData
-  } = useEditorStore()
+    importData,
+  } = useEditorStore();
 
   useKeyPress(['backspace'], (e) => {
     if (selectPlugId) {
       setSelectPlugId(null);
       deletePlug(selectPlugId);
     }
-  },);
+  });
 
   let corpIdRef = useRef<string | null>();
   useKeyPress(['ctrl.c', 'meta.c'], (e) => {
@@ -47,7 +46,7 @@ const useKeybound = () => {
     setTimeout(() => {
       corpIdRef.current = null;
     }, 60 * 1000);
-  },);
+  });
   useKeyPress(['ctrl.v', 'meta.v'], (e) => {
     let matchPlug = plugList.find(({ uuid }) => uuid === corpIdRef.current);
     if (matchPlug) {
@@ -60,7 +59,7 @@ const useKeybound = () => {
       });
       corpIdRef.current = null;
     }
-  },);
+  });
 
   /* ============================== 上下左右 =============================== */
   // useKeyPress(["uparrow"], (e) => {
@@ -87,7 +86,6 @@ const useKeybound = () => {
   //     changeSelectPlug("boxStyle.left", get(selectPlug?.boxStyle.left, 0) - 1)
   //   }
   // },);
+};
 
-}
-
-export default useKeybound
+export default useKeybound;

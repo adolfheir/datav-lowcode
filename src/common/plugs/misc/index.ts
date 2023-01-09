@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
-import { defaultProps as TextDefaultProps } from './Text';
 import { defaultProps as ImgDefaultProps } from './Img';
+import { defaultProps as TextDefaultProps } from './Text';
 
 export default {
   name: 'misc',
@@ -20,4 +20,4 @@ export default {
       defaultProps: ImgDefaultProps,
     },
   ],
-}
+};

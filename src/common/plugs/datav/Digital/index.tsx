@@ -35,7 +35,6 @@ export const defaultProps = {
 
 Index.defaultProps = defaultProps;
 
-
 Index.displayName = 'Index';
 
 export default Index;

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import type { CSSProperties } from 'react';
 import cls from 'classnames';
 import { useNavigate } from 'react-router-dom';
@@ -11,6 +11,7 @@ import CreatModal from './CreatModal';
 import img404 from './img/image-404.png';
 import styles from './index.scss';
 import { Page } from './interface';
+import mock from './mock.json';
 
 const Row = Grid.Row;
 const Col = Grid.Col;
@@ -26,9 +27,22 @@ export interface IndexProps {
 export const Index: React.FC<IndexProps> = (props) => {
   const { style, className } = props;
 
-  const [pageList, setPageList] = useLocalStorageState<Page[]>(LOCAL_KEY, {
+  const [_pageList, setPageList] = useLocalStorageState<Page[]>(LOCAL_KEY, {
     defaultValue: [],
   });
+  const pageList = useMemo(() => {
+    return [
+      ..._pageList.filter((v) => v['uuid'] !== 'test-jGo1N3PaVoYVaDBWueDMj'),
+      {
+        uuid: 'test-jGo1N3PaVoYVaDBWueDMj',
+        name: '测试页面',
+        img: '',
+      },
+    ];
+  }, []);
+  useEffect(() => {
+    localStorage.setItem(`PAGE_CONFIG_${'test-jGo1N3PaVoYVaDBWueDMj'}`, JSON.stringify(mock));
+  }, []);
 
   const navigator = useNavigate();
 

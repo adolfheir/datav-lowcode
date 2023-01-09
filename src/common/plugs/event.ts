@@ -1,4 +1,3 @@
-
 export type Handler<T = any> = (val: T) => void;
 
 class EventBus<Events extends Record<string, any>> {
@@ -9,13 +8,8 @@ class EventBus<Events extends Record<string, any>> {
    * @param name 事件名
    * @param handler 事件处理函数
    */
-  on<EventName extends keyof Events>(
-    name: EventName,
-    handler: Handler<Events[EventName]>
-  ) {
-    let set: Set<Handler<Events[EventName]>> | undefined = this.map.get(
-      name as string
-    );
+  on<EventName extends keyof Events>(name: EventName, handler: Handler<Events[EventName]>) {
+    let set: Set<Handler<Events[EventName]>> | undefined = this.map.get(name as string);
     if (!set) {
       set = new Set();
       this.map.set(name as string, set);
@@ -28,13 +22,8 @@ class EventBus<Events extends Record<string, any>> {
    * @param name 事件名
    * @param handler 事件处理函数
    */
-  emit<EventName extends keyof Events>(
-    name: EventName,
-    value: Events[EventName]
-  ) {
-    const set: Set<Handler<Events[EventName]>> | undefined = this.map.get(
-      name as string
-    );
+  emit<EventName extends keyof Events>(name: EventName, value: Events[EventName]) {
+    const set: Set<Handler<Events[EventName]>> | undefined = this.map.get(name as string);
     if (!set) return;
     const copied = [...set];
     copied.forEach((fn) => fn(value));
@@ -53,15 +42,9 @@ class EventBus<Events extends Record<string, any>> {
    * @param name 事件名
    * @param handler 处理函数
    */
-  off<EventName extends keyof Events>(
-    name: EventName,
-    handler: Handler<Events[EventName]>
-  ): void;
+  off<EventName extends keyof Events>(name: EventName, handler: Handler<Events[EventName]>): void;
 
-  off<EventName extends keyof Events>(
-    name?: EventName,
-    handler?: Handler<Events[EventName]>
-  ): void {
+  off<EventName extends keyof Events>(name?: EventName, handler?: Handler<Events[EventName]>): void {
     // 什么都不传，则清除所有事件
     if (!name) {
       this.map.clear();
@@ -75,9 +58,7 @@ class EventBus<Events extends Record<string, any>> {
     }
 
     // name 和 handler 都传了，则清除指定handler
-    const handlers: Set<Handler<Events[EventName]>> | undefined = this.map.get(
-      name as string
-    );
+    const handlers: Set<Handler<Events[EventName]>> | undefined = this.map.get(name as string);
     if (!handlers) {
       return;
     }
@@ -87,4 +68,4 @@ class EventBus<Events extends Record<string, any>> {
 
 const eventBus = new EventBus();
 
-export default eventBus
+export default eventBus;
