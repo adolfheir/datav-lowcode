@@ -129,3 +129,5 @@ build
 src/assets/font
 deploy/svg
 launch.json
+
+!/src/pages/home/mock.json

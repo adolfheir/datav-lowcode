@@ -1,0 +1,546 @@
+{
+  "pageSize": { "width": 1920, "height": 1080 },
+  "bgColor": { "r": 0, "g": 3, "b": 18, "a": 1 },
+  "bgImg": "https://blade-data.oss-cn-hangzhou.aliyuncs.com/upload/20201120/391d20010e0931733f5fb84111b2f3f0.jpg",
+  "fullScreenType": "contain",
+  "plugList": [
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "EhraARDt9tX0DJUAl3k-y",
+      "boxStyle": {
+        "width": 258.993,
+        "height": 68.9965,
+        "top": 7.29553,
+        "left": 43.3077,
+        "rotate": 0,
+        "animate": null
+      },
+      "uuid": "Z75Bwj7hCv40Gwof4eDB4",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\nlet prevProps = getPrevProps()\nlet props = {\n    content: \"测试大屏系统v1.0.0\",\n    style: {\n        letterSpacing: \"2px\",\n        fontWeight: 'normal',\n        fontSize: '20px',\n        lineHeight: '30px',\n        color: 'rgb(138, 167, 208)',\n        \"justifyContent\":\"left\"\n    }\n}\nupdate(props)"
+      },
+      "selectAble": true
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": {
+        "width": 672.996,
+        "height": 109.997,
+        "top": 4.50592,
+        "left": 627.533,
+        "rotate": 0,
+        "animate": null
+      },
+      "uuid": "nwh3pJWci3NTFx91hX_1I",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\nlet prevProps = getPrevProps()\nlet props = {\n    content: \"财务科数据展示\",\n    style: {\n        color: '#fff',\n        letterSpacing: '4px',\n        textIndent: '4px',\n        fontWeight: 'bold',\n        fontSize: '32px',\n        lineHeight: '40px',\n        \"justifyContent\": \"center\"\n    }\n}\nupdate(props)"
+      },
+      "selectAble": true
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": { "width": 254.997, "height": 52.9861, "top": 616.482, "left": 64, "rotate": 0, "animate": null },
+      "uuid": "rjT_l-JMZ7IUangEvfZty",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"药品领用实时数据\",\n    style: {\n        \"textAlign\": \"left\",\n        \"letterSpacing\": \"2px\",\n        \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"20px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": { "width": 254.997, "height": 52.993, "top": 124.4574, "left": 64, "rotate": 0, "animate": null },
+      "uuid": "eZf42GVMbsvb7nJ8l02Gv",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"物料采购概况\",\n    style: {\n        \"textAlign\": \"left\",\n        \"letterSpacing\": \"2px\",\n        \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"20px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": { "width": 254.997, "height": 52.9861, "top": 124.482, "left": 1362, "rotate": 0, "animate": null },
+      "uuid": "ZdBkoWHiUTY84y4kWkZcV",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"账户异常数据\",\n    style: {\n        \"textAlign\": \"left\",\n        \"letterSpacing\": \"2px\",\n        \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"20px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": { "width": 254.997, "height": 52.9861, "top": 620.482, "left": 1370, "rotate": 0, "animate": null },
+      "uuid": "WwwasBWHtkFRtKoCrbdcf",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"资产异常数据\",\n    style: {\n        \"textAlign\": \"left\",\n        \"letterSpacing\": \"2px\",\n        \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"20px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": { "width": 254.997, "height": 52.9861, "top": 620.482, "left": 648, "rotate": 0, "animate": null },
+      "uuid": "8PH06aRfnhdNn-W0f7TqQ",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"账户实时上下文数据\",\n    style: {\n        \"textAlign\": \"left\",\n        \"letterSpacing\": \"2px\",\n        \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"20px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "pxZENDvb5_WegH6YCouH9",
+      "boxStyle": { "width": 200, "height": 67.9861, "top": 164.028, "left": 80.042, "rotate": 0, "animate": null },
+      "uuid": "TPt_krus7vqR_MsJLvyP7",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"药品领用实时数据\",\n    style: {\n        \"letterSpacing\": \"0px\",\n        \"textIndent\": \"0px\",\n        \"fontWeight\": \"normal\",\n        \"fontSize\": \"14px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "pxZENDvb5_WegH6YCouH9",
+      "boxStyle": { "width": 200, "height": 67.9861, "top": 262.028, "left": 86.042, "rotate": 0, "animate": null },
+      "uuid": "sbML2JHOjmv9ZlNgMvcZI",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"药品领用实时数据\",\n    style: {\n        \"letterSpacing\": \"0px\",\n        \"textIndent\": \"0px\",\n        \"fontWeight\": \"normal\",\n        \"fontSize\": \"14px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "pxZENDvb5_WegH6YCouH9",
+      "boxStyle": { "width": 200, "height": 67.9861, "top": 166.028, "left": 296.042, "rotate": 0, "animate": null },
+      "uuid": "yNuC_KbH-rdP6RfNC-kx1",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"药品领用实时数据\",\n    style: {\n        \"letterSpacing\": \"0px\",\n        \"textIndent\": \"0px\",\n        \"fontWeight\": \"normal\",\n        \"fontSize\": \"14px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "pxZENDvb5_WegH6YCouH9",
+      "boxStyle": { "width": 218, "height": 67.9827, "top": 258.02085, "left": 302.042, "rotate": 0, "animate": null },
+      "uuid": "WcU_yhHJnx3sl6EkN14KS",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"药品领用实时数据\",\n    style: {\n        \"letterSpacing\": \"0px\",\n        \"textIndent\": \"0px\",\n        \"fontWeight\": \"normal\",\n        \"fontSize\": \"14px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": { "width": 287.99, "height": 97.9896, "top": 282.021, "left": 4.028, "rotate": 0, "animate": null },
+      "uuid": "WH3tEsRLdR0o0GG-QMCk9",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [12341],\n        content: \"{nt}\",\n        toFixed: 2,\n        style: {\n            fontSize: 34,\n            fill: '#00eaff',\n            fontWeight:\"bold\",\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": { "width": 287.99, "height": 141.986, "top": 174.028, "left": 10.035, "rotate": 0, "animate": null },
+      "uuid": "BGf7UfsxEvLCGEa3-lG_-",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [20024.23],\n        content: \"{nt}\",\n        toFixed: 2,\n        style: {\n            fontSize: 34,\n            fill: '#028ce5',\n            fontWeight:\"bold\"\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": { "width": 287.99, "height": 141.986, "top": 278.028, "left": 220.035, "rotate": 0, "animate": null },
+      "uuid": "fj9nwfO2H8tmzZ3FEEemb",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [5520.21],\n        content: \"{nt}\",\n        toFixed: 2,\n        style: {\n            fontSize: 34,\n            fill: 'rgba(21, 31, 221, 1)',\n            fontWeight:\"bold\"\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": { "width": 287.996, "height": 95.993, "top": 170.028, "left": 216.03, "rotate": 0, "animate": null },
+      "uuid": "7ooLlrCcIDGtZ9wIVZ8Kv",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [5520.21],\n        content: \"{nt}\",\n        toFixed: 2,\n        style: {\n            fontSize: 34,\n            fill: '#01bbf2',\n            fontWeight:\"bold\"\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": { "width": 185, "height": 60.9827, "top": 124.46925, "left": 623.999, "rotate": 0, "animate": null },
+      "uuid": "4EJ46vsZFTv9PJvJ0BuAV",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"当月上账资金总额\",\n    style: {\n        // \"letterSpacing\": \"2px\",\n        // \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"14px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"#fff\",\n        \"justifyContent\": \"center\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": { "width": 185, "height": 60.9827, "top": 122.46925, "left": 981.999, "rotate": 0, "animate": null },
+      "uuid": "ECk0zw9C4HpmsCnp29X9L",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"当月上账资金总额\",\n    style: {\n        // \"letterSpacing\": \"2px\",\n        // \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"14px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"#fff\",\n        \"justifyContent\": \"center\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": { "width": 287.99, "height": 141.986, "top": 144.028, "left": 570.035, "rotate": 0, "animate": null },
+      "uuid": "JdUMwtq8fQwBivbIo7MAH",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [5520.21],\n        content: \"{nt}\",\n        toFixed: 2,\n        style: {\n            fontSize: 36,\n            fill: '#fff',\n            fontWeight:\"bold\"\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": { "width": 287.99, "height": 141.986, "top": 146.028, "left": 928.035, "rotate": 0, "animate": null },
+      "uuid": "Ij1HZAT57Hg6_tXSUpA5o",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [5520.21],\n        content: \"{nt}\",\n        toFixed: 2,\n        style: {\n            fontSize: 36,\n            fill: '#fff',\n            fontWeight:\"bold\"\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": { "width": 98.996, "height": 36.9827, "top": 134.45775, "left": 848, "rotate": 0, "animate": null },
+      "uuid": "E-Bsvd3GrkmnTd0gVR2Il",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"同比增长金额\",\n    style: {\n        \"textAlign\": \"left\",\n        \"letterSpacing\": \"2px\",\n        \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"11px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": { "width": 98.996, "height": 36.9827, "top": 208.45775, "left": 846, "rotate": 0, "animate": null },
+      "uuid": "oExHGemPssNaUD6OGAtEA",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"同比增长率\",\n    style: {\n        \"textAlign\": \"left\",\n        \"letterSpacing\": \"2px\",\n        \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"11px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": {
+        "width": 98.9971,
+        "height": 36.9965,
+        "top": 134.458,
+        "left": 1200.002,
+        "rotate": 0,
+        "animate": null
+      },
+      "uuid": "fX2-xX5gpOVu-dqvruaxR",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"同比增长金额\",\n    style: {\n        \"textAlign\": \"left\",\n        \"letterSpacing\": \"2px\",\n        \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"11px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": {
+        "width": 98.9971,
+        "height": 34.9965,
+        "top": 206.458,
+        "left": 1199.998,
+        "rotate": 0,
+        "animate": null
+      },
+      "uuid": "cZRrop9UwPNtnXjD0VfDF",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"同比增长率\",\n    style: {\n        \"textAlign\": \"left\",\n        \"letterSpacing\": \"2px\",\n        \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"11px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": { "width": 287.99, "height": 141.986, "top": 110.278, "left": 742.535, "rotate": 0, "animate": null },
+      "uuid": "_nAx_nhbRT0NUowbRyQVT",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [5520.21],\n        content: \"{nt}\",\n        toFixed: 2,\n        style: {\n            fontSize: 20,\n            fill: '#fff',\n            fontWeight:\"bold\"\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": { "width": 287.99, "height": 141.986, "top": 186.528, "left": 741.285, "rotate": 0, "animate": null },
+      "uuid": "uSIynft7em2549RJqa72f",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [7.21],\n        content: \"{nt}%\",\n        toFixed: 2,\n        style: {\n            fontSize: 20,\n            fill: '#fff',\n            fontWeight:\"bold\"\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": {
+        "width": 287.99,
+        "height": 141.986,
+        "top": 184.278,
+        "left": 1092.035,
+        "rotate": 0,
+        "animate": null
+      },
+      "uuid": "c3Bvrrq25Usf-l7rGj11l",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [7.21],\n        content: \"{nt}%\",\n        toFixed: 2,\n        style: {\n            fontSize: 20,\n            fill: '#fff',\n            fontWeight:\"bold\"\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": {
+        "width": 287.996,
+        "height": 67.9965,
+        "top": 115.257,
+        "left": 1095.51,
+        "rotate": 0,
+        "animate": null
+      },
+      "uuid": "nTXAeMYGcaX6_L_kAoq3D",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [5520.21],\n        content: \"{nt}\",\n        toFixed: 2,\n        style: {\n            fontSize: 20,\n            fill: '#fff',\n            fontWeight:\"bold\"\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": { "width": 254.997, "height": 52.9861, "top": 182.482, "left": 1366, "rotate": 0, "animate": null },
+      "uuid": "aaeOPxrbNG2vCylXiHbtS",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"资金异常账户数\",\n    style: {\n        \"textAlign\": \"left\",\n        \"letterSpacing\": \"2px\",\n        \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"14px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": { "width": 254.997, "height": 52.9861, "top": 182.482, "left": 1612, "rotate": 0, "animate": null },
+      "uuid": "5Se4rJ5qDECoq2ADRjD1P",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"异常资金金\",\n    style: {\n        \"textAlign\": \"left\",\n        \"letterSpacing\": \"2px\",\n        \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"14px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": { "width": 254.997, "height": 52.9861, "top": 268.482, "left": 1368, "rotate": 0, "animate": null },
+      "uuid": "glG16DwAi0ay6U3BVblAZ",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"账户结账异常数\",\n    style: {\n        \"textAlign\": \"left\",\n        \"letterSpacing\": \"2px\",\n        \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"14px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "misc/Text/index",
+      "name": "Text",
+      "key": "Zg1suWSVsRaAPtFttk_Hb",
+      "boxStyle": { "width": 254.997, "height": 52.9861, "top": 264.482, "left": 1610, "rotate": 0, "animate": null },
+      "uuid": "wCf7IQI0FLbPSn6UBLRuH",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\", getPrevProps)\nconst props = {\n    content: \"xx账户异常数\",\n    style: {\n        \"textAlign\": \"left\",\n        \"letterSpacing\": \"2px\",\n        \"textIndent\": \"2px\",\n        \"fontWeight\": \"bold\",\n        \"fontSize\": \"14px\",\n        \"lineHeight\": \"40px\",\n        \"color\": \"rgb(138, 167, 208)\",\n        \"justifyContent\": \"flex-start\"\n    }\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": {
+        "width": 287.99,
+        "height": 141.986,
+        "top": 176.028,
+        "left": 1290.035,
+        "rotate": 0,
+        "animate": null
+      },
+      "uuid": "IgsCFYbNcPan3wOwgLR9E",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [5520.21],\n        content: \"{nt}\",\n        toFixed: 2,\n        style: {\n            fontSize: 34,\n            fill: 'rgba(21, 31, 221, 1)',\n            fontWeight:\"bold\"\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": { "width": 287.996, "height": 95.993, "top": 178.028, "left": 1530.03, "rotate": 0, "animate": null },
+      "uuid": "hXLOef7VRr8tVs3QoHIIt",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [5520.21],\n        content: \"{nt}\",\n        toFixed: 2,\n        style: {\n            fontSize: 34,\n            fill: '#01bbf2',\n            fontWeight:\"bold\"\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": {
+        "width": 287.99,
+        "height": 97.9896,
+        "top": 266.021,
+        "left": 1298.028,
+        "rotate": 0,
+        "animate": null
+      },
+      "uuid": "8YOwb4kgGUNr1jxZSGRdH",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [12341],\n        content: \"{nt}\",\n        toFixed: 2,\n        style: {\n            fontSize: 34,\n            fill: '#00eaff',\n            fontWeight:\"bold\",\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "key": "4WZiXPGCfywBrRdghR-sB",
+      "boxStyle": {
+        "width": 287.99,
+        "height": 141.986,
+        "top": 264.028,
+        "left": 1538.035,
+        "rotate": 0,
+        "animate": null
+      },
+      "uuid": "LDZYnPRzBkcCRBZ3e_fNn",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\nlet props = {\n    config: {\n        number: [20024.23],\n        content: \"{nt}\",\n        toFixed: 2,\n        style: {\n            fontSize: 34,\n            fill: '#028ce5',\n            fontWeight:\"bold\"\n        }\n    }\n}\nupdate(props)"
+      }
+    },
+    {
+      "loader": "echart/Bar/index",
+      "name": "Bar",
+      "key": "TOQzmac4Qcy9y19wn752a",
+      "boxStyle": { "width": 533.986, "height": 285.993, "top": 336.028, "left": 42.037, "rotate": 0, "animate": null },
+      "uuid": "pXLSbeCKi-gMHxt4pMvqx"
+    },
+    {
+      "loader": "datav/Table/index",
+      "name": "Table",
+      "key": "SZJbZkh8WMl2_S1QWBiOp",
+      "boxStyle": { "width": 487.986, "height": 307.99, "top": 706.028, "left": 36.0416, "rotate": 0, "animate": null },
+      "uuid": "xddXz-neWRd_A7vnC9uRH",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\nlet props = {\n    rowNum: 8\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Table/index",
+      "name": "Table",
+      "key": "SZJbZkh8WMl2_S1QWBiOp",
+      "boxStyle": {
+        "width": 661.983,
+        "height": 307.996,
+        "top": 698.023,
+        "left": 616.042,
+        "rotate": 0,
+        "animate": null
+      },
+      "uuid": "M0B7f7eyYgU0CC_L1jT0i",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\nlet props = {\n    rowNum: 8\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "datav/Table/index",
+      "name": "Table",
+      "key": "SZJbZkh8WMl2_S1QWBiOp",
+      "boxStyle": {
+        "width": 487.986,
+        "height": 307.99,
+        "top": 696.028,
+        "left": 1344.0416,
+        "rotate": 0,
+        "animate": null
+      },
+      "uuid": "P6jGVkgw_TeY7080_fa-v",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\nlet props = {\n    rowNum: 8\n}\n\nupdate(props)"
+      }
+    },
+    {
+      "loader": "echart/Line/index",
+      "name": "Line",
+      "key": "dg7H1vjkJ-O-kyjU9iS35",
+      "boxStyle": { "width": 616, "height": 345.983, "top": 295.997, "left": 660.03, "rotate": 0, "animate": null },
+      "uuid": "1CfHxFyVdVmChnRlRX_55"
+    },
+    {
+      "loader": "echart/Line/index",
+      "name": "Line",
+      "key": "dg7H1vjkJ-O-kyjU9iS35",
+      "boxStyle": { "width": 487.993, "height": 204, "top": 382.028, "left": 1372.04, "rotate": 0, "animate": null },
+      "uuid": "-4zudmT7GjeH1Xn38xKme",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//@ts-ignore\nconst { getPrevProps, update, eventBus } = __inject__;\n// let prevProps = getPrevProps()\n// console.log(\"getPrevProps\",getPrevProps)\n\n\n//http://echarts.zhangmuchen.top/#/detail?cid=x5jtBajjR3\nlet dataC1 = [20, 30, 60, 40, 50, 30];\nlet dataC2 = [20, 30, 60, 40, 50, 30];\nlet dataC3 = [20, 30, 60, 40, 50, 30];\nlet xData = ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'];\n\nvar fontColor = '#30eee9';\nlet option = {\n    backgroundColor: '#0b1146',\n    grid: {\n        left: '5%',\n        right: '2%',\n        top: '10%',\n        bottom: '15%',\n    },\n    legend: {\n        data: ['a'],\n        textStyle: {\n            color: '#A9DDEE',\n        },\n\n        orient: 'horizontal',\n        icon: 'rect',\n        top: '5',\n        right: '5%',\n        itemGap: 10,\n        itemWidth: 12,\n        itemHeight: 7,\n    },\n\n    tooltip: {\n        trigger: 'axis',\n        axisPointer: {\n            type: 'line',\n            lineStyle: {\n                color: '#57617B',\n            },\n        },\n    },\n    xAxis: {\n        type: 'category',\n        boundaryGap: false, //顶头显示\n        axisLine: {\n            show: true,\n            lineStyle: {\n                color: '#3585d5',\n            },\n        },\n\n        axisTick: {\n            show: false,\n            // alignWithLabel: true,\n            lineStyle: {\n                color: '#3585d5',\n            },\n        },\n        axisLabel: {\n            fontSize: 18,\n        },\n        data: xData,\n    },\n    yAxis: {\n        name: '%',\n        type: 'value',\n        axisLine: {\n            show: true,\n            lineStyle: {\n                color: '#3585d5',\n            },\n        },\n        splitLine: {\n            show: false,\n            lineStyle: {\n                type: 'dotted',\n                color: '#3585d5',\n            },\n        },\n        axisTick: {\n            show: false,\n        },\n        axisLabel: {\n            fontSize: 16,\n        },\n        boundaryGap: false,\n    },\n    series: [\n        {\n            name: 'a',\n            type: 'line',\n            stack: '总量',\n            smooth: true,\n            symbol: 'none',\n            showSymbol: true,\n            symbolSize: 80,\n            itemStyle: {\n                normal: {\n                    color: '#71bd27',\n                    lineStyle: {\n                        color: '#71bd27',\n                        width: 3,\n                    },\n                    areaStyle: {\n\n                        color: {\n                            type: 'linear',\n                            x: 0,\n                            y: 1,\n                            x2: 0,\n                            y2: 0,\n                            colorStops: [\n                                {\n                                    offset: 0.4,\n                                    color: 'rgba(240, 250, 230,0.1)',\n                                },\n                                {\n                                    offset: 1,\n                                    color: 'rgba(240, 250, 230,0.9)',\n                                },\n                            ],\n                        },\n\n                    },\n                },\n            },\n            // markPoint: {\n            //     itemStyle: {\n            //         normal: {\n            //             color: 'red',\n            //         },\n            //     },\n            // },\n            data: dataC1,\n        },\n    ],\n};\n\n\n\nupdate({\n    options: {\n        theme: \"avue\",\n        ...option\n    }\n})"
+      }
+    },
+    {
+      "loader": "datav/Digital/index",
+      "name": "Digital",
+      "defaultProps": { "config": { "data": { "number": [100], "content": "{nt}个" } } },
+      "key": "LQuymL_gkeiv91XtgUkAw",
+      "boxStyle": {
+        "width": 200,
+        "height": 200,
+        "top": 752.0277709960938,
+        "left": 714.0416259765625,
+        "rotate": 0,
+        "animate": null
+      },
+      "selectAble": true,
+      "uuid": "lfijUaP6k4KUTa-0ffy3N"
+    },
+    {
+      "loader": "echart/Line/index",
+      "name": "Line",
+      "key": "fUcUCB4JlBeyLmGR3oNxj",
+      "boxStyle": {
+        "width": 200,
+        "height": 200,
+        "top": 446.02777099609375,
+        "left": 696.0416259765625,
+        "rotate": 0,
+        "animate": null
+      },
+      "defaultProps": {
+        "options": {
+          "theme": "avue",
+          "xAxis": { "type": "category", "data": ["7月", "8月", "9月", "10月", "11月"] },
+          "yAxis": { "type": "value" },
+          "series": [
+            {
+              "type": "line",
+              "smooth": true,
+              "name": "上账资金走势",
+              "data": [18100.09, 28781.31, 25654.2, 30398.73, 16560.39]
+            },
+            {
+              "type": "line",
+              "smooth": true,
+              "name": "下账资金走势",
+              "data": [20100.09, 16281.31, 18654.2, 20021.73, 31560.02]
+            }
+          ]
+        }
+      },
+      "selectAble": true,
+      "uuid": "m4c_O5xSG0xivFfx1-M-H",
+      "plugProps": {
+        "__inject__": "//注入3个变量\n//getPrevProps：获取组件配置\n//update：更新组件配置\n//eventBus：全局事件总线\n//组件默认属性\nlet defaultData={\n\t\"options\": {\n\t\t\"theme\": \"avue\",\n\t\t\"xAxis\": {\n\t\t\t\"type\": \"category\",\n\t\t\t\"data\": [\n\t\t\t\t\"7月\",\n\t\t\t\t\"8月\",\n\t\t\t\t\"9月\",\n\t\t\t\t\"10月\",\n\t\t\t\t\"11月\"\n\t\t\t]\n\t\t},\n\t\t\"yAxis\": {\n\t\t\t\"type\": \"value\"\n\t\t},\n\t\t\"series\": [\n\t\t\t{\n\t\t\t\t\"type\": \"line\",\n\t\t\t\t\"smooth\": true,\n\t\t\t\t\"name\": \"上账资金走势\",\n\t\t\t\t\"data\": [\n\t\t\t\t\t18100.09,\n\t\t\t\t\t28781.31,\n\t\t\t\t\t25654.2,\n\t\t\t\t\t30398.73,\n\t\t\t\t\t16560.39\n\t\t\t\t]\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"type\": \"line\",\n\t\t\t\t\"smooth\": true,\n\t\t\t\t\"name\": \"下账资金走势\",\n\t\t\t\t\"data\": [\n\t\t\t\t\t20100.09,\n\t\t\t\t\t16281.31,\n\t\t\t\t\t18654.2,\n\t\t\t\t\t20021.73,\n\t\t\t\t\t31560.02\n\t\t\t\t]\n\t\t\t}\n\t\t]\n\t}\n}\n//@ts-ignore\nconst { getPrevProps, update, eventBus ,defaultProps } = __inject__;\nlet prevProps = getPrevProps()\nconsole.log(\"getPrevProps\",getPrevProps)\nupdate(prevProps)"
+      }
+    }
+  ]
+}
